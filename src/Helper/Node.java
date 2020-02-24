@@ -9,7 +9,7 @@ public class Node<T> {
         return data;
     }
     //Setter for data
-    public static void setData(T data) {
+    public void setData(T data) {
         this.data = data;
     }
     //Getter for self referential data
