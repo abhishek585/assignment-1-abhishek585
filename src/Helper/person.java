@@ -12,6 +12,7 @@ public abstract class person implements Comparable<person> {
 
         return firstName;
     }
+
     //Setter for first name
     public void setFirstName(String firstName) {
         System.out.println(firstName);
@@ -33,14 +34,17 @@ public abstract class person implements Comparable<person> {
     public String getEmailID() {
         return emailID;
     }
+
     //Setter for EmailID
     public void setEmailID(String emailID) {
         this.emailID = emailID;
     }
+
     //Getter for fetching all phone numbers
     public StringBuffer getPhoneNumber() {
         return this.phoneNumbers;
     }
+
     //Setter for inserting new phone numbers
     public void setPhoneNumbers(String phoneNumber) {
         if (phoneNumbers == null) {
@@ -49,6 +53,7 @@ public abstract class person implements Comparable<person> {
             this.phoneNumbers.append(", " + phoneNumber);
         }
     }
+
     //toString method to show all phone numbers of person
     @Override
     public String toString() {
@@ -67,5 +72,12 @@ public abstract class person implements Comparable<person> {
                     "Contact Number(s): " + getPhoneNumber() + "\n" +
                     "-------- * -------- * -------- * --------";
     }
+
+    //compareTo method for comparing objects of person class
+    @Override
+    public int compareTo(person newPerson) {
+        return this.getFirstName().compareTo(newPerson.getFirstName());
+    }
 }
+
 
