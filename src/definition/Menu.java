@@ -25,7 +25,6 @@ public class Menu {
     }
     public void addChoice() {
         person person = new person();
-        String name;
         System.out.println("You have chosen to add a new contact: \n" +
                 "Please enter the name of the Person\n");
         scan.nextLine();
@@ -33,9 +32,14 @@ public class Menu {
         //taking the input from the user
 
         System.out.println("First Name: ");
-        name = scan.nextLine().
+        String name = scan.nextLine().
 
-                trim() {
+                trim();
+        {
 
         }
-}
+        person.setFirstName(name);
+        //taking input of first name
+        System.out.print("Last Name: ");
+    }
+    }
