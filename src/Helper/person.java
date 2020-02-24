@@ -9,6 +9,7 @@ public abstract class person implements Comparable<person> {
 
     //Getter for first name
     public String getFirstName() {
+
         return firstName;
     }
     //Setter for first name
@@ -16,20 +17,25 @@ public abstract class person implements Comparable<person> {
         System.out.println(firstName);
         this.firstName = firstName;
     }
+
     //Getter for last name
     public String getLastName() {
         return lastName;
     }
+
     //Setter for last name
     public void setLastName(String lastName) {
         System.out.println(lastName);
         this.lastName = lastName;
     }
+
     //Getter for Email ID
     public String getEmailID() {
         return emailID;
     }
-
-
+    //Setter for EmailID
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
+    }
 }
 
