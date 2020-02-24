@@ -19,4 +19,16 @@ public class MyLinkedList<T extends  Comparable<T>> {
     public void setIter(Node<T> iter) {
         this.iter = iter;
     }  //Setter for iter
+    //method to insert new node
+    public void insert(Node<T> node) {
+        if (getHead() == null) {
+            setHead(node);
+        } else {
+            Node<T> temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            temp.setNext(node);
+        }
+    }
 }
