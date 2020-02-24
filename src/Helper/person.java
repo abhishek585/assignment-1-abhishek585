@@ -37,5 +37,9 @@ public abstract class person implements Comparable<person> {
     public void setEmailID(String emailID) {
         this.emailID = emailID;
     }
+    //Getter for fetching all phone numbers
+    public StringBuffer getPhoneNumber() {
+        return this.phoneNumbers;
+    }
 }
 
