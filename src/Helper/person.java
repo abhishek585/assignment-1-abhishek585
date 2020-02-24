@@ -41,5 +41,13 @@ public abstract class person implements Comparable<person> {
     public StringBuffer getPhoneNumber() {
         return this.phoneNumbers;
     }
+    //Setter for inserting new phone numbers
+    public void setPhoneNumbers(String phoneNumber) {
+        if (phoneNumbers == null) {
+            this.phoneNumbers = new StringBuffer(phoneNumber);
+        } else {
+            this.phoneNumbers.append(", " + phoneNumber);
+        }
+    }
 }
 
