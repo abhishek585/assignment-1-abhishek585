@@ -62,5 +62,34 @@ public class Menu {
             c = scan.nextLine().trim().charAt(0);
             //input to add another contact number
         }
+        String email = null;
+        System.out.print("Would you like to add email address? (y/n): ");
+        c = scan.nextLine().trim().charAt(0);
+        if (c == 'y') {
+            System.out.print("Email Address: ");
+            email = scan.nextLine().trim();
+            person.setEmailID(email);
+            System.out.println("y");
+        } else {
+            person.setEmailID("");
+            System.out.println("n");
+        }
+
+        Node<person> node =new Node<>();
+        Node.setData(person);
+        linkedList.insert((Helper.Node<person>)node);        //connection
+    }
+    private void sortList(MyLinkedList<person> linkedList){
+        linkedList.sort();
+    }
+    //viewing the conditions
+    public void viewChoice() {
+        sortList(linkedList);
+        while(true){
+            Node<person> node = linkedList.getObject();
+            if(node==null)
+                break;
+            System.out.println(node.getData());
+        }
     }
     }
