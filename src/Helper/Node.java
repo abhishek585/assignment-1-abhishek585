@@ -16,4 +16,8 @@ public class Node<T> {
     public Node<T> getNext() {
         return next;
     }
+    //Setter for self referential data
+    public void setNext(Node<T> next) {
+        this.next = next;
+    }
 }
