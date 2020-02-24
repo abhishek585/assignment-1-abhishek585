@@ -23,5 +23,19 @@ public class Menu {
                 "Press 5 to exit program");
         return scan.nextInt();
     }
+    public void addChoice() {
+        person person = new person();
+        String name;
+        System.out.println("You have chosen to add a new contact: \n" +
+                "Please enter the name of the Person\n");
+        scan.nextLine();
 
+        //taking the input from the user
+
+        System.out.println("First Name: ");
+        name = scan.nextLine().
+
+                trim() {
+
+        }
 }
