@@ -25,6 +25,11 @@ public abstract class person implements Comparable<person> {
         System.out.println(lastName);
         this.lastName = lastName;
     }
+    //Getter for Email ID
+    public String getEmailID() {
+        return emailID;
+    }
+
 
 }
 
