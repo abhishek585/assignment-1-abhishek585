@@ -44,5 +44,11 @@ public class Menu {
         name = scan.nextLine().trim();
         person.setLastName(name);
         //taking input of last name
+
+        String number;
+        System.out.print("Contact Number: ");
+        number = scan.nextLine().trim();
+        person.setPhoneNumbers(number);
+        //input of contact number
     }
     }
