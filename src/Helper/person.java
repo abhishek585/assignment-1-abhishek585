@@ -11,5 +11,11 @@ public abstract class person implements Comparable<person> {
     public String getFirstName() {
         return firstName;
     }
+    //Setter for first name
+    public void setFirstName(String firstName) {
+        System.out.println(firstName);
+        this.firstName = firstName;
+    }
+
 }
 
