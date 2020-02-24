@@ -50,5 +50,17 @@ public class Menu {
         number = scan.nextLine().trim();
         person.setPhoneNumbers(number);
         //input of contact number
+        char c;
+        System.out.print("Would you like to add another contact number? (y/n): ");
+        c = scan.nextLine().trim().charAt(0);
+        while (c == 'y') {
+            System.out.print("Contact Number: ");
+            number = scan.nextLine().trim();
+            person.setPhoneNumbers(number);
+
+            System.out.print("Would you like to add another contact number? (y/n): ");
+            c = scan.nextLine().trim().charAt(0);
+            //input to add another contact number
+        }
     }
     }
