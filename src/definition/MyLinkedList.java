@@ -62,5 +62,8 @@ public class MyLinkedList<T extends  Comparable<T>> {
         }
         return deletedNode;
     }
-
+    //Helper method to check if linked list is empty or not
+    public boolean isEmpty() {
+        return head == null;
+    }
 }
