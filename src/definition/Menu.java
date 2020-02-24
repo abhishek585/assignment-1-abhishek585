@@ -14,6 +14,7 @@ public class Menu {
         scan = new Scanner(System.in);
         linkedList = new MyLinkedList<>();
     }
+
     public int showChoice() {
         System.out.println("Welcome to Devesh's Contact List App\n" +
                 "Press 1 to add a new contact\n" +
@@ -23,6 +24,7 @@ public class Menu {
                 "Press 5 to exit program");
         return scan.nextInt();
     }
+
     public void addChoice() {
         person person = new person();
         System.out.println("You have chosen to add a new contact: \n" +
@@ -75,21 +77,70 @@ public class Menu {
             System.out.println("n");
         }
 
-        Node<person> node =new Node<>();
+        Node<person> node = new Node<>();
         Node.setData(person);
-        linkedList.insert((Helper.Node<person>)node);        //connection
+        linkedList.insert((Helper.Node<person>) node);        //connection
     }
-    private void sortList(MyLinkedList<person> linkedList){
+
+    private void sortList(MyLinkedList<person> linkedList) {
         linkedList.sort();
     }
+
     //viewing the conditions
     public void viewChoice() {
         sortList(linkedList);
-        while(true){
+        while (true) {
             Node<person> node = linkedList.getObject();
-            if(node==null)
+            if (node == null)
                 break;
             System.out.println(node.getData());
         }
     }
+
+    public void searchChoice() {
+        int counter = 0;
+        System.out.print("You could search for a contact from their first names: ");
+        scan.nextLine();
+        String name = scan.nextLine().trim();
+
+        while (true) {
+            Node<person> node = linkedList.getObject();
+            if (node == null)
+                break;
+            if (node.getData().getFirstName().compareTo(name) == 0)
+                counter++;
+        }
+        System.out.println(counter + " match found!");
+        while (true) {
+            Node<person> node = linkedList.getObject();
+            if (node == null)
+                break;
+            if (node.getData().getFirstName().compareTo(name) == 0)
+                System.out.println(node.getData());
+        }
     }
+
+    public void deleteChoice() {
+        System.out.println("Here are all your contacts:");
+        int i = 1;
+        while (true) {
+            Node<person> node = linkedList.getObject();
+            if (node == null)
+                break;
+            System.out.println(i + ". " + node.getData().getFirstName() + " " + node.getData().getLastName());
+            i++;
+        }
+        System.out.print("Press the number against the contact to delete it: ");
+        int position = scan.nextInt();
+        person person = linkedList.delete(position).getData();
+
+        System.out.println(person.getFirstName() + " " + person.getLastName() + "'s contact deleted from list!");
+    }
+
+    public void exitChoice() {
+        System.out.println("Exiting");
+        //deleting the choice and showing all the contacts    }
+    }
+}
+
+
