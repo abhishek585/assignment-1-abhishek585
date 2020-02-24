@@ -41,5 +41,8 @@ public class Menu {
         person.setFirstName(name);
         //taking input of first name
         System.out.print("Last Name: ");
+        name = scan.nextLine().trim();
+        person.setLastName(name);
+        //taking input of last name
     }
     }
