@@ -49,5 +49,23 @@ public abstract class person implements Comparable<person> {
             this.phoneNumbers.append(", " + phoneNumber);
         }
     }
+    //toString method to show all phone numbers of person
+    @Override
+    public String toString() {
+        if (this.getEmailID() != "")
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + "\n" +
+                    "Last Name: " + this.getLastName() + "\n" +
+                    "Contact Number(s): " + getPhoneNumber() + "\n" +
+                    "Email address: " + this.getEmailID() + "\n" +
+                    "-------- * -------- * -------- * --------";
+        else
+
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + "\n" +
+                    "Last Name: " + this.getLastName() + "\n" +
+                    "Contact Number(s): " + getPhoneNumber() + "\n" +
+                    "-------- * -------- * -------- * --------";
+    }
 }
 
